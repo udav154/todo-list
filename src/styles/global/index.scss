@@ -1,6 +1,6 @@
 @import "normalize.scss";
 
-.root {
+:root {
     --gx-color-white: #ffffff;
 
 }
@@ -20,10 +20,15 @@
   }
 
 main {
-    height: 100vh;
     padding-top: 64px;
-    width: 100%;
     padding-left: 72px;
+    height: 100vh;
+    width: 100%;
+    background-color: #e9e9ef;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 .hidden {

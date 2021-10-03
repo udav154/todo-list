@@ -1,10 +1,10 @@
 import React from 'react';
 import Layout from '../views';
 
-const BasketPage = ({ ...props }) => {
+const BasketPage = ({title, ...props }) => {
 
     return (
-        <Layout >
+        <Layout title={title}>
             {() => {
                 return (
                     <p>

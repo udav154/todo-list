@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import SideBar from '../views/SideBar/Combain';
-
+import '../styles/index.scss'
 
 const Layout = ({ title, children, ...props }) => {
 

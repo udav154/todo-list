@@ -6,8 +6,9 @@ import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import { Box } from '@mui/material';
 import { mainListItems, secondaryListItems } from '../SideBarViews';
-
+import {Logo} from '../../../images'
 
 
 
@@ -47,12 +48,19 @@ const SideBar = ({ children,  open, setOpen, toggleDrawer,  drawerWidth, ...prop
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'flex-end',
-          px: [1],
         }}
       >
+        <Box sx={{flexGrow: 1,
+        display: "flex",
+        justifyContent: "center"}}>
+        <img  width="200" height="50"
+        src={Logo}
+      />
+      </Box>
         <IconButton onClick={toggleDrawer}>
           <ChevronLeftIcon />
         </IconButton>
+        
       </Toolbar>
       <Divider />
       <List>{mainListItems}</List>

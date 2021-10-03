@@ -8,4 +8,7 @@ export const PATHS = {
     home: {
         url: '/home'
     },
+    archive: {
+        url: '/archive'
+    }
 }

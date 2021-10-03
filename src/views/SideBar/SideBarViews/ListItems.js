@@ -1,4 +1,4 @@
-import  React from 'react';
+import React from 'react';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
@@ -10,6 +10,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import { NavLink } from 'react-router-dom';
 import styles from '../styles/index.module.scss'
+import stylejs from '../styles'
 
 export const mainListItems = (
   <div>
@@ -19,27 +20,31 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Добавить Запись" />
     </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <FormatListNumberedIcon />
-      </ListItemIcon>
-      <NavLink className={styles.nav_link} to='/todo'>Список</NavLink>
+    <ListItem >
+      <NavLink className={styles.nav_link} to='/todo'>
+        <ListItemIcon>
+          <FormatListNumberedIcon />
+          <ListItemText sx={{...stylejs.text}} primary="Список" />
+        </ListItemIcon>
+      </NavLink>
     </ListItem>
 
-    <NavLink className={styles.nav_link} to='/basket' > 
-    <ListItem button>
-      <ListItemIcon>
-        <DeleteIcon />
-        <ListItemText primary="Корзина" />
-      </ListItemIcon>
+    <ListItem >
+      <NavLink className={styles.nav_link} to='/basket' >
+        <ListItemIcon>
+          <DeleteIcon />
+          <ListItemText sx={{...stylejs.text}} primary="Корзина" />
+        </ListItemIcon>
+      </ NavLink>
     </ListItem>
-    </ NavLink>
-    
-    <ListItem button>
-      <ListItemIcon>
-        <AutoDeleteIcon />
-      </ListItemIcon>
-      <NavLink className={styles.nav_link} to='/archive'>Архив</NavLink>
+
+    <ListItem b>
+      <NavLink className={styles.nav_link} to='/archive'>
+        <ListItemIcon>
+          <AutoDeleteIcon />
+          <ListItemText sx={{...stylejs.text}} primary="Архив" />
+        </ListItemIcon>
+      </NavLink>
     </ListItem>
   </div>
 );

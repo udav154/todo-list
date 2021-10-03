@@ -3,7 +3,8 @@ const stylejs = {
 
  },
  text: {
-
+    marginLeft: "33px",
+    color: "black"
  }
 
 }

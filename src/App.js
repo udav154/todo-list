@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Route, Redirect } from 'react-router-dom';
+import { PATHS } from './const';
+import Pages from './pages/index';
 
-function App() {
+const App = () => {
+ 
+  const renderHomePage = ( location, ) => {
+    return (
+      <Pages.TodoPage {...location} title={"Todo"} />
+    )
+  }
+  const renderBasketPage = ( location, ) => {
+    return (
+      <Pages.BasketPage {...location} title={"Basket"} />
+    )
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+        <Route exact render={ renderHomePage } path={PATHS.todo.url} />
+        <Route exact render={ renderBasketPage } path={PATHS.basket.url} />
+        <Redirect to={PATHS.todo.url} />
+    </BrowserRouter>
+  )
 }
 
 export default App;
+

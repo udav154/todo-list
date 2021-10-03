@@ -1,0 +1,12 @@
+.header {
+    &_menu {
+        &_link {
+            text-decoration: none;
+            color: var(--gx-color-white);
+            font-weight: 500;
+            font-size: 23px;
+            padding: 0 20px;
+            
+        }
+    }
+}

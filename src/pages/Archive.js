@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../views';
+import AchiveTable from '../views/ArchiveTable'
 
 const ArchivePage = ({title, ...props }) => {
 
@@ -7,26 +8,7 @@ const ArchivePage = ({title, ...props }) => {
         <Layout title={title}>
             {() => {
                 return (
-                    <p>
-                    ArchivePage ArchivePage ArchivePage ArchivePage<br />
-                    ArchivePage ArchivePage ArchivePage ArchivePage<br />
-                    ArchivePage ArchivePage ArchivePage ArchivePage<br />
-                    ArchivePage ArchivePage ArchivePage ArchivePage<br />
-                    ArchivePage ArchivePage ArchivePage ArchivePage<br />
-                    ArchivePage ArchivePage ArchivePage ArchivePage<br />
-                    ArchivePage ArchivePage ArchivePage ArchivePage<br />
-
-                    ArchivePage ArchivePage ArchivePage ArchivePage<br />
-                    ArchivePage ArchivePage ArchivePage ArchivePage<br />
-                    ArchivePage ArchivePage ArchivePage ArchivePage<br />
-                    ArchivePage ArchivePage ArchivePage ArchivePage<br />
-                    ArchivePage ArchivePage ArchivePage ArchivePage<br />
-                    ArchivePage ArchivePage ArchivePage ArchivePage<br />
-                    ArchivePage ArchivePage ArchivePage ArchivePage<br />
-                    ArchivePage ArchivePage ArchivePage ArchivePage<br />
-                    ArchivePage ArchivePage ArchivePage ArchivePage<br />
-                    ArchivePage ArchivePage ArchivePage ArchivePage<br />
-                    </p>
+                    <AchiveTable />
                 )
             }}
         </Layout>

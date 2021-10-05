@@ -5,8 +5,8 @@ import '../styles/index.scss'
 
 const Layout = ({ title, children, ...props }) => {
 
-  const [open, setOpen] = React.useState(false);
-  const drawerWidth = 350;
+  const [open, setOpen] = React.useState(true);
+  const drawerWidth = 300;
 
   const toggleDrawer = () => {
     setOpen(!open);

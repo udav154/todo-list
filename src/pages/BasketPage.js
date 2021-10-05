@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../views';
+import BasketTable from '../views/BasketTable'
 
 const BasketPage = ({title, ...props }) => {
 
@@ -7,26 +8,7 @@ const BasketPage = ({title, ...props }) => {
         <Layout title={title}>
             {() => {
                 return (
-                    <p>
-                    BasketPage BasketPage BasketPage BasketPage<br />
-                    BasketPage BasketPage BasketPage BasketPage<br />
-                    BasketPage BasketPage BasketPage BasketPage<br />
-                    BasketPage BasketPage BasketPage BasketPage<br />
-                    BasketPage BasketPage BasketPage BasketPage<br />
-                    BasketPage BasketPage BasketPage BasketPage<br />
-                    BasketPage BasketPage BasketPage BasketPage<br />
-
-                    BasketPage BasketPage BasketPage BasketPage<br />
-                    BasketPage BasketPage BasketPage BasketPage<br />
-                    BasketPage BasketPage BasketPage BasketPage<br />
-                    BasketPage BasketPage BasketPage BasketPage<br />
-                    BasketPage BasketPage BasketPage BasketPage<br />
-                    BasketPage BasketPage BasketPage BasketPage<br />
-                    BasketPage BasketPage BasketPage BasketPage<br />
-                    BasketPage BasketPage BasketPage BasketPage<br />
-                    BasketPage BasketPage BasketPage BasketPage<br />
-                    BasketPage BasketPage BasketPage BasketPage<br />
-                    </p>
+                    <BasketTable />
                 )
             }}
         </Layout>

@@ -1,4 +1,4 @@
-const styles = {
+const stylejs = {
     appBar: {
         backgroundColor: "darkslateblue",
         position: "absolute",
@@ -37,4 +37,4 @@ const styles = {
 
 }
 
-export default styles
+export default stylejs

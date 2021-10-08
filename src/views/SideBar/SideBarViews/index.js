@@ -1,8 +1,6 @@
-import { mainListItems, secondaryListItems }   from './ListItems';
-
-
+import { MainListItems, SecondaryListItems }   from './ListItems';
 
 export {
-    mainListItems,
-    secondaryListItems
+    MainListItems,
+    SecondaryListItems
 }

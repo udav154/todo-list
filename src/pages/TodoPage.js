@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../views';
-import TodoTable from '../views/TodoTable'
+import Tables from "../views/Tables";
 
 const TodoPage = ({ title, ...props }) => {
 
@@ -8,7 +8,7 @@ const TodoPage = ({ title, ...props }) => {
         <Layout title={title}>
             {() => {
                 return (<>
-                    <TodoTable />
+                    <Tables.TodoTable />
                 </>
                 )
             }}

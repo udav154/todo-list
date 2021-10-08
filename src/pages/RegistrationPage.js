@@ -1,14 +1,14 @@
 import React from 'react';
 import Layout from '../views';
-import Tables from "../views/Tables";
+import Components from '../components'
 
-const BasketPage = ({title, ...props }) => {
+const RegistrationPage = ({title, ...props }) => {
 
     return (
         <Layout title={title}>
             {() => {
                 return (
-                    <Tables.BasketTable />
+                  <Components.RegistrationComponent />
                 )
             }}
         </Layout>
@@ -16,4 +16,4 @@ const BasketPage = ({title, ...props }) => {
     )
 }
 
-export default BasketPage;
+export default RegistrationPage;

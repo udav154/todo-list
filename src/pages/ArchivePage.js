@@ -2,13 +2,13 @@ import React from 'react';
 import Layout from '../views';
 import Tables from "../views/Tables";
 
-const BasketPage = ({title, ...props }) => {
+const ArchivePage = ({title, ...props }) => {
 
     return (
         <Layout title={title}>
             {() => {
                 return (
-                    <Tables.BasketTable />
+                    <Tables.AchiveTable />
                 )
             }}
         </Layout>
@@ -16,4 +16,4 @@ const BasketPage = ({title, ...props }) => {
     )
 }
 
-export default BasketPage;
+export default ArchivePage;

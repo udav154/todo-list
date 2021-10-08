@@ -7,13 +7,14 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { Box } from '@mui/material';
-import { mainListItems, secondaryListItems } from '../SideBarViews';
-import {Logo} from '../../../images'
+import { MainListItems, SecondaryListItems } from '../SideBarViews';
+import { Logo } from '../../../images'
+import stylejs from '../styles'
 
 
 
 const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
-  ({ theme, open,  drawerWidth }) => ({
+  ({ theme, open, drawerWidth }) => ({
     '& .MuiDrawer-paper': {
       position: "absolute",
       whiteSpace: 'nowrap',
@@ -39,35 +40,30 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 );
 
 
-const SideBar = ({ children,  open, setOpen, toggleDrawer,  drawerWidth, ...props }) => {
+const SideBar = ({ children, open, setOpen, toggleDrawer, drawerWidth, ...props }) => {
 
   return (
     <Drawer variant="permanent" drawerWidth={drawerWidth} open={open}>
-      <Toolbar
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'flex-end',
-        }}
-      >
-        <Box sx={{flexGrow: 1,
-        display: "flex",
-        justifyContent: "center"}}>
-        <img  width="200" height="50"
-        src={Logo}
-      />
-      </Box>
+      <Toolbar sx={{ ...stylejs.toolbar }} >
+        <Box sx={{ ...stylejs.box }}>
+          <img alt=" Site logo" width="200" height="50"
+            src={Logo}
+          />
+        </Box>
         <IconButton onClick={toggleDrawer}>
           <ChevronLeftIcon />
         </IconButton>
-        
       </Toolbar>
       <Divider />
-      <List>{mainListItems}</List>
+      <List>
+        <MainListItems {...props} />
+      </List>
       <Divider />
-      <List>{secondaryListItems}</List>
+      <List>
+        <SecondaryListItems />
+      </List>
     </Drawer>
-      
+
   )
 }
 

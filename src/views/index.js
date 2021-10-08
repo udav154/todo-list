@@ -1,12 +1,16 @@
 import React from 'react';
-import Header from '../components/Header';
+import HeaderComponent from '../components/HeaderComponent';
 import SideBar from '../views/SideBar/Combain';
 import '../styles/index.scss'
+import AddModalComponents from '../components/AddModal';
 
 const Layout = ({ title, children, ...props }) => {
-
+  const [openAdd, setOpenAdd] = React.useState(false);
   const [open, setOpen] = React.useState(true);
   const drawerWidth = 300;
+  const handleOpenAdd = () => setOpenAdd(true);
+  const handleCloseAdd = () => setOpenAdd(false);
+
 
   const toggleDrawer = () => {
     setOpen(!open);
@@ -15,9 +19,12 @@ const Layout = ({ title, children, ...props }) => {
   const requareProperty = {
     open,
     drawerWidth,
+    title,
+    openAdd,
     setOpen,
     toggleDrawer,
-    title,
+    handleOpenAdd,
+    handleCloseAdd,
     ...props
   }
 
@@ -29,13 +36,13 @@ const Layout = ({ title, children, ...props }) => {
 
   return (
     <>
- 
-      <header> <Header  {...requareProperty} >
+      <AddModalComponents {...requareProperty}/>
+      <header> <HeaderComponent  {...requareProperty} >
       <SideBar   {...requareProperty} />
       <main>
       {children()}
       </main>
-      </Header>
+      </HeaderComponent>
       </header>
     </>
   )

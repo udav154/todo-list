@@ -1,14 +1,14 @@
 import React from 'react';
 import Layout from '../views';
-import AchiveTable from '../views/ArchiveTable'
+import Components from '../components'
 
-const ArchivePage = ({title, ...props }) => {
+const AuthenticationPage = ({title, ...props }) => {
 
     return (
         <Layout title={title}>
             {() => {
                 return (
-                    <AchiveTable />
+                  <Components.AuthenticationComponent />
                 )
             }}
         </Layout>
@@ -16,4 +16,4 @@ const ArchivePage = ({title, ...props }) => {
     )
 }
 
-export default ArchivePage;
+export default AuthenticationPage;

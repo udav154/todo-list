@@ -1,9 +1,13 @@
 import TodoPage from "./TodoPage";
 import BasketPage from "./BasketPage";
-import ArchivePage from "./Archive";
+import ArchivePage from "./ArchivePage";
+import RegistrationPage from "./RegistrationPage";
+import AuthenticationPage from "./AuthenticationPage";
 
-export default {
+export {
     TodoPage,
     BasketPage,
-    ArchivePage
+    ArchivePage,
+    AuthenticationPage,
+    RegistrationPage
 }
